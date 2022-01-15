@@ -1,5 +1,11 @@
 # Generateur de code de sécurité pour autoradio Renault
 
+## Page web
+
+**[kpym.github.io/autoradio-renault](https://kpym.github.io/autoradio-renault)**
+
+## L'origine
+
 Le code qui transforme le precode en code a été empreinté à [@lucasg](https://lucasg.github.io/2019/08/03/Compute-renault-radio-code/).
 
 ## code javascript
@@ -10,7 +16,7 @@ function code(precode) {
     if (!/^[B-Zb-z]\d{3}$/.test(precode)) {
       return '';
     }
-    // précode ver majuscules
+    // première lettre du précode en majuscule
     precode = precode.toUpperCase();
     // varaible temporaire
     x = precode.charCodeAt(1) + precode.charCodeAt(0) * 10 - 698;
