@@ -37,8 +37,9 @@
     </div>
     <!-- ----------- messages d'erreur -------------- -->
     <div x-show="!test" class="alert alert-warning" role="alert">
-      <strong>Le précode doit être composé d'une lettre entre <code>B</code> et <code>Z</code> suivie de 3 chiffres (ex: <code>B123</code>).</strong><br>
-      Le précode est écrit en arrière de l'autoradio, mais peut être récupéré sans le démontage <a href="https://youtu.be/nRGq3OI25Io">en appuyant simultanément</a> sur les touches <kbd>1</kbd> et <kbd>6</kbd> (ou <kbd>1</kbd> et <kbd>5</kbd>), puis sur le bouton d'alimentation.
+      <strong>Le précode doit être composé d'une lettre suivie de 3 chiffres (exemple&nbsp;: <code>A123</code>).</strong><br>
+      Le précode est écrit en arrière de l'autoradio, mais peut être récupéré sans le démontage <a href="https://youtu.be/nRGq3OI25Io">en appuyant simultanément</a> sur les touches <kbd>1</kbd> et <kbd>6</kbd> (ou <kbd>1</kbd> et <kbd>5</kbd>), puis sur le bouton d'alimentation.<br>
+      <em>Le calcul du code ne fonctionne pas pour les précodes qui commencent avec <strong><code>A0</code></strong>.</em>
     </div>
     <div x-show="test" class="alert alert-success" role="alert">
       Pour activer votre radio :

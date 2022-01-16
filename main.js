@@ -4,15 +4,24 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('rcode', () => RCode);
 })
 
+function normalize(precode) {
+  // première lettre du précode en majuscule
+  precode = precode.toUpperCase();
+  // lettre et 3 chiffres, mais pas de la forme A0XX
+  if (!/^[A-Z]\d{3}$/.test(precode) || precode.startsWith("A0")) {
+    return "";
+  }
+  return precode;
+}
+
 RCode = {
   precode: '',
   get code() {
-    // vrification du précode
-    if (!this.test) {
-      return '';
+    // normalisation et vrification du précode
+    precode = normalize(this.precode);
+    if (precode == "") {
+      return "";
     }
-    // première lettre du précode en majuscule
-    precode = this.precode.toUpperCase();
     // varaible temporaire
     x = precode.charCodeAt(1) + precode.charCodeAt(0) * 10 - 698;
     y = precode.charCodeAt(3) + precode.charCodeAt(2) * 10 + x - 528;
@@ -23,6 +32,7 @@ RCode = {
     return code.toString().padStart(4, '0')
   },
   get test(){
-    return /^[B-Zb-z]\d{3}$/.test(this.precode);
+    // retourne vrai si le precode est conforme
+    return normalize(this.precode) != "";
   }
 }

@@ -12,12 +12,12 @@ Le code qui transforme le precode en code a été empreinté à [@lucasg](https:
 
 ```js
 function code(precode) {
-    // vrification du précode
-    if (!/^[B-Zb-z]\d{3}$/.test(precode)) {
-      return '';
-    }
     // première lettre du précode en majuscule
     precode = precode.toUpperCase();
+    // vrification du précode
+    if (!/^[A-Z]\d{3}$/.test(precode) || precode.startsWith("A0")) {
+      return '';
+    }
     // varaible temporaire
     x = precode.charCodeAt(1) + precode.charCodeAt(0) * 10 - 698;
     y = precode.charCodeAt(3) + precode.charCodeAt(2) * 10 + x - 528;
