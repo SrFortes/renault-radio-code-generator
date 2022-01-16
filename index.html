@@ -31,14 +31,24 @@
         <input id="precode" x-model="precode" type="text" class="form-control" aria-label="précode de l'autoradio">
       </div>
       <div class="form-group col-sm-12 col-md-6">
-        <label for="code">RIO</label>
+        <label for="code">Code</label>
         <input id="code" x-model="code" type="text" class="form-control" readonly="readonly" aria-label="Code de sécurité de l'autoradio">
       </div>
     </div>
     <!-- ----------- messages d'erreur -------------- -->
     <div x-show="!test" class="alert alert-warning" role="alert">
       <strong>Le précode doit être composé d'une lettre entre <code>B</code> et <code>Z</code> suivie de 3 chiffres (ex: <code>B123</code>).</strong><br>
-      Le précode est écrit en arrière de l'autoradio, mais peut être récupéré sans le démontage en appuyant simultanément sur les touches <code>1</code> et <code>6</code> (ou <code>1</code> et <code>5</code>), puis sur le bouton d'alimentation.
+      Le précode est écrit en arrière de l'autoradio, mais peut être récupéré sans le démontage <a href="https://youtu.be/nRGq3OI25Io">en appuyant simultanément</a> sur les touches <kbd>1</kbd> et <kbd>6</kbd> (ou <kbd>1</kbd> et <kbd>5</kbd>), puis sur le bouton d'alimentation.
+    </div>
+    <div x-show="test" class="alert alert-success" role="alert">
+      Pour activer votre radio :
+      <ol>
+        <li x-show="code[0]>0">Appuyer <strong><code x-text="code[0]"></code></strong> fois sur le bouton <kbd>1</kbd>.</li>
+        <li x-show="code[1]>0">Appuyer <strong><code x-text="code[1]"></code></strong> fois sur le bouton <kbd>2</kbd>.</li>
+        <li x-show="code[2]>0">Appuyer <strong><code x-text="code[2]"></code></strong> fois sur le bouton <kbd>3</kbd>.</li>
+        <li x-show="code[3]>0">Appuyer <strong><code x-text="code[3]"></code></strong> fois sur le bouton <kbd>4</kbd>.</li>
+        <li>Appuyer sur le bouton <kbd>6</kbd> (ou <kbd>5</kbd>) pour terminer.</li>
+      </ol>
     </div>
   </div>
   <!-- Le lien vers le dépôt GitHub -->
