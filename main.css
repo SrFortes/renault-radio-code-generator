@@ -10,3 +10,9 @@
   padding-top: .25em;
   padding-bottom: .25em;
 }
+@media (min-width: 768px) {
+  .lang {
+    text-align: right;
+    margin-top:-3rem
+  }
+}

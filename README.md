@@ -2,7 +2,8 @@
 
 ## Page web
 
-**[kpym.github.io/autoradio-renault](https://kpym.github.io/autoradio-renault)**
+- En français : **[kpym.github.io/autoradio-renault](https://kpym.github.io/autoradio-renault)**
+- In english : **[kpym.github.io/autoradio-renault/en.html](https://kpym.github.io/autoradio-renault/en.html)**
 
 ## L'origine
 
