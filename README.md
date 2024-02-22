@@ -2,8 +2,8 @@
 
 ## Page web
 
-- En français : **[kpym.github.io/autoradio-renault](https://kpym.github.io/autoradio-renault)**
-- In english : **[kpym.github.io/autoradio-renault/en.html](https://kpym.github.io/autoradio-renault/en.html)**
+- En français : **[renault-dacia-radio-code-generator.netlify.app](https://renault-dacia-radio-code-generator.netlify.app/)**
+- In english : **[renault-dacia-radio-code-generator.netlify.app/en.html](https://renault-dacia-radio-code-generator.netlify.app/en.html)**
 
 ## L'origine
 
