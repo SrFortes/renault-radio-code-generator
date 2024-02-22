@@ -2,9 +2,7 @@
 # Radio code generator for Renault & Dacia
 
 ## Web Page
-
-- Français : **[renault-dacia-radio-code-generator.netlify.app](https://renault-dacia-radio-code-generator.netlify.app/)**
-- English : **[renault-dacia-radio-code-generator.netlify.app/en.html](https://renault-dacia-radio-code-generator.netlify.app/en.html)**
+**[renault-dacia-radio-code-generator.netlify.app](https://renault-dacia-radio-code-generator.netlify.app)**
 
 ## Credits
 
