@@ -1,34 +1,14 @@
-# Generateur de code de sécurité pour autoradio Renault
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5626f6a7-7c68-4eb0-99f4-26cdf678d6f9/deploy-status)](https://app.netlify.com/sites/renault-dacia-radio-code-generator/deploys)
+# Radio code generator for Renault & Dacia
 
-## Page web
+## Web Page
 
-- En français : **[renault-dacia-radio-code-generator.netlify.app](https://renault-dacia-radio-code-generator.netlify.app/)**
-- In english : **[renault-dacia-radio-code-generator.netlify.app/en.html](https://renault-dacia-radio-code-generator.netlify.app/en.html)**
+- Français : **[renault-dacia-radio-code-generator.netlify.app](https://renault-dacia-radio-code-generator.netlify.app/)**
+- English : **[renault-dacia-radio-code-generator.netlify.app/en.html](https://renault-dacia-radio-code-generator.netlify.app/en.html)**
 
-## L'origine
+## Credits
 
-Le code qui transforme le precode en code a été empreinté à [@lucasg](https://lucasg.github.io/2019/08/03/Compute-renault-radio-code/).
-
-## code javascript
-
-```js
-function code(precode) {
-    // première lettre du précode en majuscule
-    precode = precode.toUpperCase();
-    // vrification du précode
-    if (!/^[A-Z]\d{3}$/.test(precode) || precode.startsWith("A0")) {
-      return '';
-    }
-    // varaible temporaire
-    x = precode.charCodeAt(1) + precode.charCodeAt(0) * 10 - 698;
-    y = precode.charCodeAt(3) + precode.charCodeAt(2) * 10 + x - 528;
-    z = (y*7) % 100;
-    // le code comme entier
-    code = Math.floor(z / 10) + (z % 10) * 10 + ((259 % x) % 100) * 100;
-    // le code comme chaîne avec 4 chiffres
-    return code.toString().padStart(4, '0')
-  }
-```
+Original precode generator was made by [lucasg](https://github.com/lucasg).
 
 ## Licence
 
