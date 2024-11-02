@@ -10,6 +10,24 @@ function normalize(precode) {
   return precode;
 }
 
+function findPrecode(targetCode) {
+  for (let letter = 65; letter <= 90; letter++) { // A-Z
+    for (let num1 = 0; num1 <= 9; num1++) {
+      for (let num2 = 0; num2 <= 9; num2++) {
+        for (let num3 = 0; num3 <= 9; num3++) {
+          const precode = String.fromCharCode(letter) + `${num1}${num2}${num3}`;
+          RCode.precode = precode;
+
+          if (RCode.code === targetCode) {
+            return precode;
+          }
+        }
+      }
+    }
+  }
+  return null; // Se nenhum precode for encontrado
+}
+
 RCode = {
   precode: '',
   get code() {
